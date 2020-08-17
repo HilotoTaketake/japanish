@@ -1,0 +1,2 @@
+module JapaneseUsersHelper
+end

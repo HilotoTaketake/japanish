@@ -1,0 +1,3 @@
+class EnglishUsersController < ApplicationController
+  
+end

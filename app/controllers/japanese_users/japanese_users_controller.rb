@@ -1,0 +1,5 @@
+class JapaneseUsersController < ApplicationController
+
+  
+  
+end

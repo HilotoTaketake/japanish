@@ -1,0 +1,2 @@
+module English::RegistrationsHelper
+end
