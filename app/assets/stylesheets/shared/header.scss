@@ -1,0 +1,35 @@
+.header {
+  background-color: navy;
+  display: flex;
+  height: 10vh;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  &__people {
+    background-color: white;
+    padding: 5px 50px;
+    &__btn {
+      font-size: 35px;
+      color: navy;
+      text-decoration: none;
+    }
+  }
+  &__chat {
+    background-color: white;
+    padding: 5px 50px;
+    &__btn {
+      font-size: 35px;
+      color: navy;
+      text-decoration: none;
+    }
+  }
+  &__mypage {
+    background-color: white;
+    padding: 5px 50px;
+    &__btn {
+      font-size: 35px;
+      color: navy;
+      text-decoration: none;
+    }
+  }
+}

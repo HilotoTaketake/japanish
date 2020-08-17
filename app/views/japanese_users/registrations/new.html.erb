@@ -1,0 +1,105 @@
+<%= render "shared/header" %>
+  <%= form_with model:@japanese_user, url: japanese_user_registration_path, method: :post, local: true do |f| %>
+    <div class="japanese">
+      <div class="japanese__registration">
+        <div class="japanese__registration__text">
+          <div class="japanese__registration__text__app">Japanish</div>
+          <div class="japanese__registration__text__logo">Sign up</div>
+        </div>
+      </div>
+      <%# エラーメッセージ %>
+      <% if @japanese_user.errors.any? %>
+      <div class="japanese__error">
+        <ul>
+          <%= @japanese_user.errors.full_messages.each do |message| %>
+            <li class='japanese__error__message'><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+      <%# エラーメッセージ %>
+      <div class="japanese__form">
+        <div class="japanese__form__name">
+          <div class='japanese__form__name__text'>
+            <label class="japanese__form__name__text__category">Name</label>
+            <span class="japanese__form__name__text__necessity">*</span>
+          </div>
+          <%= f.text_area :name, class:"japanese__form__name__input", placeholder:"ex) aaa111@jeng.com", maxlength:"40" %>
+        </div>
+        <div class="japanese__form__email">
+          <div class='japanese__form__email__text'>
+            <label class="japanese__form__email__text__category">Email</label>
+            <span class="japanese__form__email__text__necessity">*</span>
+          </div>
+          <%= f.text_area :email, class:"japanese__form__email__input", placeholder:"ex) aaa111@jeng.com", maxlength:"40" %>
+        </div>
+        <div class="japanese__form__password">
+          <div class='japanese__form__password__text'>
+            <label class="japanese__form__password__text__category">Password</label>
+            <span class="japanese__form__password__text__necessity">*</span>
+          </div>
+          <%= f.text_area :password, class:"japanese__form__password__input", placeholder:"ex) jeng1111", maxlength:"40" %>
+        </div>
+        <div class="japanese__form__password_confirmation">
+          <div class='japanese__form__password_confirmation__text'>
+            <label class="japanese__form__password_confirmation__text__category">Password-Confirmation</label>
+            <span class="japanese__form__password_confirmation__text__necessity">*</span>
+          </div>
+          <%= f.text_area :password_confirmation, class:"japanese__form__password_confirmation__input", placeholder:"ex) jeng1111", maxlength:"40" %>
+        </div>
+        <div class="japanese__form__img">
+          <div class="japanese__form__img__text">
+            <label class="japanese__form__img__text__category">Selfy</label>
+            <span class="japanese__form__img__text__necessity">*</span>
+          </div>
+          <%= f.file_field :selfy, class:"japanese__form__img__input", id:'selfy' %>
+        </div>
+        <div class="japanese__form__sex">
+          <div class='japanese__form__sex__text'>
+            <label class="japanese__form__sex__text__category">Sex</label>
+            <span class="japanese__form__sex__text__necessity">*</span>
+          </div>
+          <%= f.collection_select(:sex_id, Sex.all, :id, :name, {include_blank:"Sex"}, {class:"japanese__form__sex__input"}) %>  
+        </div>
+        <div class="japanese__form__how_old">
+          <div class='japanese__form__how_old__text'>
+            <label class="japanese__form__how_old__text__category">How_old</label>
+            <span class="japanese__form__how_old__text__necessity">*</span>
+          </div>
+          <%= f.text_area :how_old, class:"japanese__form__how_old__input", placeholder:"ex) 25",id:'how_old', maxlength:"40" %>
+        </div>
+        <div class="japanese__form__prefecture">
+          <div class='japanese__form__prefecture__text'>
+            <label class="japanese__form__prefecture__text__category">Prefecture</label>
+            <span class="japanese__form__prefecture__text__necessity">*</span>
+          </div>
+          <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {include_blank:"Prefecture"}, {class:"japanese__form__prefecture__input"}) %>  
+        </div>
+        <div class="japanese__form__topic">
+          <div class='japanese__form__topic__text'>
+            <label class="japanese__form__topic__text__category">Favorite Topic</label>
+          </div>
+          <div class="japanese__form__topic__input">
+            <div class="japanese__form__topic__input__1">
+              <%= f.text_area :topic_1, class:"japanese__form__topic__input__1__space", placeholder:"topic1 ex) Comics", id:'topic_1', maxlength:"40" %> 
+            </div>
+            <div class="japanese__form__topic__input__2">
+              <%= f.text_area :topic_2, class:"japanese__form__topic__input__2__space", placeholder:"topic1 ex) Sports", id:'topic_2', maxlength:"40" %> 
+            </div>
+            <div class="japanese__form__topic__input__3">
+              <%= f.text_area :topic_3, class:"japanese__form__topic__input__3__space", placeholder:"topic1 ex) Movies", id:'topic_3', maxlength:"40" %> 
+            </div>
+          </div>       
+        </div>
+        <div class="japanese__form__introduction">
+          <div class='japanese__form__introduction__text'>
+            <label class="japanese__form__introduction__text__category">Introduction</label>
+          </div>
+          <%= f.text_area :introduction, class:"japanese__form__introduction__input", placeholder:"ex) Nice to meet you" %>
+        </div>
+      </div>
+      <div class="japanese__btn">
+        <%= f.submit "sign up", class:"japanese__btn__text"%>
+      </div>
+    </div>
+  <% end %>
