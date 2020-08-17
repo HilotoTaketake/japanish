@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  */
-@import "japanese_users/new";
+
 @import "english_users/new";
+@import "japanese_users/new";
 @import "shared/header";
 @import "tops/index";
