@@ -32,7 +32,7 @@ Things you may want to cover:
 DEMO(ビューのイメージ)<br>
 [![Image from Gyazo](https://i.gyazo.com/d725ed31daab1260599afab5bc40d946.png)](https://gyazo.com/d725ed31daab1260599afab5bc40d946)<br>
 [![Image from Gyazo](https://i.gyazo.com/f5c4d833b6a2903dd3d4b35552c9a6f8.png)](https://gyazo.com/f5c4d833b6a2903dd3d4b35552c9a6f8)<br>
-[![Image from Gyazo](https://i.gyazo.com/fb5daaaed8cdae62af45afcc1107ee1a.png)](https://gyazo.com/fb5daaaed8cdae62af45afcc1107ee1a)
+[![Image from Gyazo](https://i.gyazo.com/fb5daaaed8cdae62af45afcc1107ee1a.png)](https://gyazo.com/fb5daaaed8cdae62af45afcc1107ee1a)<br>
 実装予定の内容<br>
 ・認証機能<br>
 ・登録機能<br>
