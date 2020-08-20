@@ -1,4 +1,4 @@
-class JapaneseUsers::RegistrationsController < ApplicationController
+class JapaneseUsers::RegistrationsController < Devise::RegistrationsController
 
   def new
     @japanese_user = JapaneseUser.new
@@ -7,7 +7,8 @@ class JapaneseUsers::RegistrationsController < ApplicationController
   def create
     @japanese_user = JapaneseUser.new(japanese_user_params)
     if @japanese_user.save
-      redirect_to root_path
+      bypass_sign_in(@japanese_user)
+      redirect_to japanese_users_path(@japanese_user)
     else
       render :new
     end
@@ -16,7 +17,7 @@ class JapaneseUsers::RegistrationsController < ApplicationController
   private
 
   def japanese_user_params
-    params.permit(:name, :email, :password, :password_confirmation, :selfy, :sex_id, :prefecture_id, :how_old, :topic_1, :topic_2, :topic_3, :introduction)
+    params.require(:japanese_user).permit(:name, :email, :password, :password_confirmation, :selfy, :sex_id, :prefecture_id, :how_old, :topic_1, :topic_2, :topic_3, :introduction)
   end
 
 end

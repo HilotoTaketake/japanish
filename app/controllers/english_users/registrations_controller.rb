@@ -1,4 +1,4 @@
-class EnglishUsers::RegistrationsController < ApplicationController
+class EnglishUsers::RegistrationsController < Devise::RegistrationsController
 
   def new
     @english_user = EnglishUser.new
@@ -7,7 +7,8 @@ class EnglishUsers::RegistrationsController < ApplicationController
   def create
     @english_user = EnglishUser.new(english_user_params)
     if @english_user.save
-      redirect_to root_path
+      bypass_sign_in(@english_user)
+      redirect_to english_users_path(@english_user)
     else
       render :new
     end
@@ -17,7 +18,7 @@ end
 private
 
 def english_user_params
-  params.permit(:name, :email, :password, :password_confirmation, :selfy, :sex_id, :prefecture_id, :how_old, :topic_1, :topic_2, :topic_3, :introduction)
+  params.require(:english_user).permit(:name, :email, :password, :password_confirmation, :selfy, :sex_id, :prefecture_id, :how_old, :topic_1, :topic_2, :topic_3, :introduction)
 end
 
 

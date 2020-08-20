@@ -3,6 +3,12 @@ class EnglishUser < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :prefecture
+  belongs_to_active_hash :sex
+  has_one_attached :selfy
 
   with_options presence: true do
     validates :name
@@ -14,7 +20,7 @@ class EnglishUser < ApplicationRecord
     validates :prefecture_id
     validates :how_old
   end
+  
 end
 
 
-# validates :phone_number, length: { maximum: 11, message: "must be less than or equal to 11 characters" }, format: { with: /\A[0-9]+\z/, message: "should not include -" }

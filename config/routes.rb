@@ -8,11 +8,13 @@ Rails.application.routes.draw do
 
   
   root to: "tops#index"
+  get '/english_users/:id', to: 'english_users/english_users#index', as: :english_users
+  get '/japanese_users/:id', to: 'japanese_users/japanese_users#index', as: :japanese_users
   resources :japanese_users
   resources :english_users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
-# post '/users', to: 'registrations#create', as: :create_user_registration
+
 # devise_for :users, controllers: {
 #   registrations: 'users/registrations',
 #   sessions: 'users/sessions'

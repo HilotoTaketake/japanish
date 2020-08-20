@@ -1,0 +1,2 @@
+module JapaneseUsers::RegistrationsHelper
+end

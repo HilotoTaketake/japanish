@@ -24,28 +24,28 @@
             <label class="english__form__name__text__category">Name</label>
             <span class="english__form__name__text__necessity">*</span>
           </div>
-          <%= f.text_area :name, class:"english__form__name__input", placeholder:"ex) Tony Brown", maxlength:"40" %>
+          <%= f.text_area :name, class:"english__form__name__input", placeholder:"ex) Tony Brown", id:'name', maxlength:"40" %>
         </div>
         <div class="english__form__email">
           <div class='english__form__email__text'>
             <label class="english__form__email__text__category">Email</label>
             <span class="english__form__email__text__necessity">*</span>
           </div>
-          <%= f.text_area :email, class:"english__form__email__input", placeholder:"ex) aaa111@jeng.com", maxlength:"40" %>
+          <%= f.text_area :email, class:"english__form__email__input", placeholder:"ex) aaa111@jeng.com", id:'email', maxlength:"40" %>
         </div>
         <div class="english__form__password">
           <div class='english__form__password__text'>
             <label class="english__form__password__text__category">Password</label>
             <span class="english__form__password__text__necessity">*</span>
           </div>
-          <%= f.text_area :password, class:"english__form__password__input", placeholder:"ex) jeng1111", maxlength:"40" %>
+          <%= f.text_area :password, class:"english__form__password__input", placeholder:"ex) jeng1111", id:'password', maxlength:"40" %>
         </div>
         <div class="english__form__password_confirmation">
           <div class='english__form__password_confirmation__text'>
             <label class="english__form__password_confirmation__text__category">Password-Confirmation</label>
             <span class="english__form__password_confirmation__text__necessity">*</span>
           </div>
-          <%= f.text_area :password_confirmation, class:"english__form__password_confirmation__input", placeholder:"ex) jeng1111", maxlength:"40" %>
+          <%= f.text_area :password_confirmation, class:"english__form__password_confirmation__input", placeholder:"ex) jeng1111", id:'password_confirmation', maxlength:"40" %>
         </div>
         <div class="english__form__img">
           <div class="english__form__img__text">
@@ -95,7 +95,7 @@
           <div class='english__form__introduction__text'>
             <label class="english__form__introduction__text__category">Introduction</label>
           </div>
-          <%= f.text_area :introduction, class:"english__form__introduction__input", placeholder:"ex) Nice to meet you" %>
+          <%= f.text_area :introduction, class:"english__form__introduction__input", id:'introduction', placeholder:"ex) Nice to meet you" %>
         </div>
       </div>
       <div class="english__btn">
