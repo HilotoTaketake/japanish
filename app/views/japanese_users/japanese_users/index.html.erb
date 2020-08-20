@@ -1,13 +1,13 @@
 <%= render "shared/header" %>
   <div class="my">
     <ul class='my__btn'>
-    <% if english_user_signed_in? %>
+    <% if japanese_user_signed_in? %>
       <li>
         <%= link_to "#" do%>
         <%= icon('fa', 'cog', class: "my__btn__icon")%>
         <% end %> 
       </li> 
-      <li><%= link_to 'Log-out', "#", class: "my__btn__out" %></li>
+      <li><%= link_to 'Log-out', destroy_japanese_user_registration_path, method: :delete, class: "my__btn__out" %></li>
     <% else %>
       <li><%= link_to 'Log-in', "#", class: "my__btn__login" %></li>
       <li><%= link_to 'Sign-up', "#", class: "my__btn__sign-up" %></li>
@@ -26,7 +26,7 @@
       </div>
       <div class="my__profile__sex">
         <div class="my__profile__sex__label">Sex</div>
-        <div class="my__profile__sex__data"><%= @sex.name %></div>
+        <div class="my__profile__sex__data"><%= @japanese_user.sex.name %></div>
       </div>
       <div class="my__profile__how_old">
         <div class="my__profile__how_old__label">How-old</div>
@@ -34,7 +34,7 @@
       </div>
       <div class="my__profile__prefecture">
         <div class="my__profile__prefecture__label">Prefecture</div>
-        <div class="my__profile__prefecture__data"><%= @prefecture.name %></div>
+        <div class="my__profile__prefecture__data"><%= @japanese_user.prefecture.name %></div>
       </div>
       <% if @japanese_user.topic_1.present? %>
       <div class="my__profile__topic">

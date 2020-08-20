@@ -3,7 +3,13 @@ class JapaneseUser < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :prefecture
+  belongs_to_active_hash :sex
+  has_one_attached :selfy
 
+  
   with_options presence: true do
     validates :name
     validates :email, uniqueness: true
@@ -15,5 +21,4 @@ class JapaneseUser < ApplicationRecord
     validates :how_old
   end
   
-  has_one_attached :selfy
 end

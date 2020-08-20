@@ -1,4 +1,4 @@
-class EnglishUsers::RegistrationsController < Devise::RegistrationsController
+class EnglishUsers::RegistrationsController < ApplicationController
 
   def new
     @english_user = EnglishUser.new
@@ -13,6 +13,13 @@ class EnglishUsers::RegistrationsController < Devise::RegistrationsController
       render :new
     end
   end
+
+  def destroy
+    @english_user = EnglishUser.find(params[:id])
+    @english_user.destroy
+    redirect_to root_path
+  end
+  
 end
 
 private

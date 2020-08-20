@@ -1,4 +1,4 @@
-class JapaneseUsers::RegistrationsController < Devise::RegistrationsController
+class JapaneseUsers::RegistrationsController < ApplicationController
 
   def new
     @japanese_user = JapaneseUser.new
@@ -12,6 +12,12 @@ class JapaneseUsers::RegistrationsController < Devise::RegistrationsController
     else
       render :new
     end
+  end
+
+  def destroy
+    @japanese_user = JapaneseUser.find(params[:id])
+    @japanese_user.destroy
+    redirect_to root_path
   end
 
   private
