@@ -7,12 +7,13 @@ class JapaneseUser < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :email, uniqueness: true
-    validates :password, length: { minimum: 6 }
-    validates :password_confirmation, confirmation: true
+    validates :password, length: { minimum: 6, message: "must be more than or equal to 6 characters" }
+    validates :password_confirmation
     validates :selfy
     validates :sex_id
     validates :prefecture_id
     validates :how_old
   end
- 
+  
+  has_one_attached :selfy
 end

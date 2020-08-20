@@ -7,7 +7,6 @@ class DeviseCreateEnglishUsers < ActiveRecord::Migration[6.0]
       t.string  :name,      null: false
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.string  :selfy,         null: false
       t.integer :sex_id,        null: false
       t.integer :prefecture_id, null: false
       t.integer :how_old,       null: false
