@@ -14,6 +14,20 @@ class JapaneseUsers::RegistrationsController < ApplicationController
     end
   end
 
+  def edit
+    @japanese_user = JapaneseUser.find(params[:id])
+  end
+
+  def update
+    @japanese_user = JapaneseUser.find(params[:id])
+    if @japanese_user.update(japanese_user_params)
+      bypass_sign_in(@japanese_user)
+      redirect_to japanese_users_path(@japanese_user)
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @japanese_user = JapaneseUser.find(params[:id])
     @japanese_user.destroy

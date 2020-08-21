@@ -3,7 +3,7 @@
     <ul class='my__btn'>
     <% if english_user_signed_in? %>
       <li>
-        <%= link_to "#" do%>
+        <%= link_to english_user_edit_registration_path, method: :get do%>
         <%= icon('fa', 'cog', class: "my__btn__icon")%>
         <% end %> 
       </li> 
