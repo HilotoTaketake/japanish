@@ -1,0 +1,18 @@
+.login {
+  color: skyblue;
+  font-size: 30px;
+  padding: 5px;
+  border: 1px solid black;
+  width: 95px;
+  text-decoration:none ;
+  margin: 10px;
+}
+.message {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  &__text {
+    font-size: 30px;
+    color: black;
+  }
+}

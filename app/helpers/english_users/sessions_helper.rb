@@ -1,0 +1,2 @@
+module EnglishUsers::SessionsHelper
+end

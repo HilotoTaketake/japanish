@@ -1,0 +1,116 @@
+.english {
+  background: linear-gradient(-135deg, #E4A972, #9941D8);
+  height: 100%;
+  width: 100%;
+  &__signin {
+    &__text {
+      text-align: center;
+      &__app {
+        font-size: 70px;
+        color: navy;
+      }
+      &__logo {
+        font-size: 50px;
+        color: black;
+        margin-bottom: 50px;
+      }
+    }
+  }
+  &__error {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+    &__message {
+      font-size: 1.3vw;
+      list-style: circle;
+      color: rgb(182, 48, 0);
+    }
+  }
+  &__form {
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    &__name {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+      &__text {
+        display: flex;
+        &__category {
+          font-size: 40px;
+          color: black;
+        }
+        &__necessity {
+          color: red;
+        }
+      }
+      &__input {
+        border: black solid 2px;
+        margin-top: 15px;
+        margin-right: 35px;
+        padding: 5px;
+        height: 20px;
+        font-size: 15px;
+      }
+    }
+    &__email {
+      margin-top: 70px;
+      display: flex;
+      justify-content: space-around;
+      &__text {
+        display: flex;
+        &__category {
+          font-size: 40px;
+          color: black;
+        }
+        &__necessity {
+          color: red;
+        }
+      }
+      &__input {
+        border: black solid 2px;
+        margin-top: 15px;
+        margin-right: 30px;
+        padding: 5px;
+        height: 20px;
+        font-size: 15px;
+      }
+    }
+    &__password {
+      margin-top: 70px;
+      display: flex;
+      justify-content: space-around;
+      &__text {
+        display: flex;
+        &__category {
+          font-size: 40px;
+          color: black;
+        }
+        &__necessity {
+          color: red;
+        }
+      }
+      &__input {
+        border: black solid 2px;
+        margin-top: 15px;
+        margin-right: 60px;
+        padding: 5px;
+        height: 20px;
+        font-size: 15px;
+      }
+    }
+  }
+  &__btn {
+    margin-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    &__text {
+      width: 80px;
+      border: black solid 2px;
+      font-size: 20px;
+      color: white;
+      background-color: skyblue;
+    }
+  }
+}
