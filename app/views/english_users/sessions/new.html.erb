@@ -1,0 +1,42 @@
+<%= render "shared/header" %>
+  <%= form_with model:@english_user, url: update_english_user_registration_path, method: :patch, local: true do |f| %>
+    <div class="english">
+      <div class="english__signin">
+        <div class="english__signin__text">
+          <div class="english__signin__text__app">Japanish</div>
+          <div class="english__signin__text__logo">sign in</div>
+        </div>
+      </div>
+      <%# <% エラーメッセージ %> 
+      <% if @english_user.errors.any? %> 
+      <div class="english__error"> 
+        <ul> 
+          <% @english_user.errors.full_messages.each do |message| %> 
+            <li class='english__error__message'><%= message %></li> 
+          <% end %> 
+        </ul> 
+      </div>
+      <% end  %>
+      <%# エラーメッセージ %>
+      <div class="english__form">
+        <div class="english__form__email">
+          <div class='english__form__email__text'>
+            <label class="english__form__email__text__category">Email</label>
+            <span class="english__form__email__text__necessity">*</span>
+          </div>
+          <%= f.text_area :email, class:"english__form__email__input", placeholder:"ex) aaa111@japanish.com", id:'email', maxlength:"40" %>
+        </div>
+        <div class="english__form__password">
+          <div class='english__form__password__text'>
+            <label class="english__form__password__text__category">Password</label>
+            <span class="english__form__password__text__necessity">*</span>
+          </div>
+          <%= f.text_area :password, class:"english__form__password__input", placeholder:"ex) japanish1111", id:'password', maxlength:"40" %>
+        </div>
+      </div>
+      <div class="english__btn">
+        <%= f.submit "sign in", class:"english__btn__text"%>
+      </div>
+    </div>
+  <% end %>
+

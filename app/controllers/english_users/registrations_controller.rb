@@ -28,11 +28,6 @@ class EnglishUsers::RegistrationsController < ApplicationController
     end
   end
 
-  def destroy
-    @english_user = EnglishUser.find(params[:id])
-    @english_user.destroy
-    redirect_to root_path
-  end
   
 end
 

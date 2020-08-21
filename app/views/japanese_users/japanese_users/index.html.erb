@@ -7,10 +7,7 @@
         <%= icon('fa', 'cog', class: "my__btn__icon")%>
         <% end %> 
       </li> 
-      <li><%= link_to 'Log-out', destroy_japanese_user_registration_path, method: :delete, class: "my__btn__out" %></li>
-    <% else %>
-      <li><%= link_to 'Log-in', "#", class: "my__btn__login" %></li>
-      <li><%= link_to 'Sign-up', "#", class: "my__btn__sign-up" %></li>
+      <li><%= link_to 'Log-out', japanese_user_destroy_session_path, method: :delete, class: "my__btn__out" %></li>
     <% end %>
     </ul>
     <div class="my__profile">

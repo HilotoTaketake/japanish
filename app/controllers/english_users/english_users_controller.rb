@@ -4,6 +4,7 @@ class EnglishUsers::EnglishUsersController < ApplicationController
     @sex = Sex.all
     @prefecture = Prefecture.all
     @english_user = EnglishUser.find(params[:id])
+    # @english_user = EnglishUser.all
   end
   
 end

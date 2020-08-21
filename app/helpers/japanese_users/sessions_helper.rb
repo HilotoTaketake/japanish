@@ -1,0 +1,2 @@
+module JapaneseUsers::SessionsHelper
+end
