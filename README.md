@@ -46,13 +46,17 @@ url: https://japanish-27497.herokuapp.com/<br>
 
 <br>
 <h4>登録画面</h4><br>
+
 [![Image from Gyazo](https://i.gyazo.com/2b50e5a650b69ce7ab753443cab66096.png)](https://gyazo.com/2b50e5a650b69ce7ab753443cab66096)<br>
 [![Image from Gyazo](https://i.gyazo.com/f79d051498528b9b5187e390c4cf613c.png)](https://gyazo.com/f79d051498528b9b5187e390c4cf613c)<br>
 [![Image from Gyazo](https://i.gyazo.com/bdb6b04a935400bc6e6a7cc4d3dd09bf.png)](https://gyazo.com/bdb6b04a935400bc6e6a7cc4d3dd09bf)<br>
+
 <br>
 <h4>プロフィール画面</h4><br>
+
 [![Image from Gyazo](https://i.gyazo.com/20e14680060916dcf78e1de8c5add338.png)](https://gyazo.com/20e14680060916dcf78e1de8c5add338)<br>
 [![Image from Gyazo](https://i.gyazo.com/c52fc26ede29bccff9964bbc8db5d8cd.png)](https://gyazo.com/c52fc26ede29bccff9964bbc8db5d8cd)<br>
+
 <br>
 <h2>工夫したポイント</h2><br>
 工夫した点は見えているビューを４つに場合分けした点です。<br>
