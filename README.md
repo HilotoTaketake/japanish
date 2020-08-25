@@ -35,9 +35,13 @@ heroku/ユーザーネーム: takenishi711/パスワード: Tjapanish711<br>
 このアプリケーションを作成したいのは２つの理由からです。１つ目は殆どのスピーキング能力を伸ばすアプリが有料であることです。僕自身留学の経験があり英語をある程度使えます。その能力を保ち向上するために有料アプリを利用した経験がありましたが無料で英語能力を保てたらいいなと思いこのアプリケーションを作りたいと思いました。また私は積極的な方ではないのでSNSを通じて英語圏で日本語を勉強したい方に声をかけることができないので同じ英語を学びたい意思を持つ方達が集うSNSを利用したいと思いました。以上の理由から日本語を学びたい英語圏の方、英語を学びたい日本語圏の方を１つのアプリに集えるアプリケーションを作成したいです。<br>
 <br>
 <h2>DEMO(ビューのイメージ)</h2><br>
+<h4>トップ画面</h4><br>
 [![Image from Gyazo](https://i.gyazo.com/f375efb83793b0e0b0d7064750a8e19d.png)](https://gyazo.com/f375efb83793b0e0b0d7064750a8e19d)<br>
+<br>
+<h4>登録画面</h4><br>
 [![Image from Gyazo](https://i.gyazo.com/2b50e5a650b69ce7ab753443cab66096.png)](https://gyazo.com/2b50e5a650b69ce7ab753443cab66096)<br>
 [![Image from Gyazo](https://i.gyazo.com/f79d051498528b9b5187e390c4cf613c.png)](https://gyazo.com/f79d051498528b9b5187e390c4cf613c)<br>
+<br>
 [![Image from Gyazo](https://i.gyazo.com/bdb6b04a935400bc6e6a7cc4d3dd09bf.png)](https://gyazo.com/bdb6b04a935400bc6e6a7cc4d3dd09bf)<br>
 [![Image from Gyazo](https://i.gyazo.com/20e14680060916dcf78e1de8c5add338.png)](https://gyazo.com/20e14680060916dcf78e1de8c5add338)<br>
 [![Image from Gyazo](https://i.gyazo.com/c52fc26ede29bccff9964bbc8db5d8cd.png)](https://gyazo.com/c52fc26ede29bccff9964bbc8db5d8cd)<br>
