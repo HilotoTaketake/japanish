@@ -29,7 +29,7 @@ japanish<br>
 英語又は日本語を使って言語能力を向上したいと思う方達をターゲットにお互いの能力を高め合うためのアプリケーション。<br>
 <br>
 <h2>本番環境</h2><br>
-url: https://japanish-27497.herokuapp.com/
+url: https://japanish-27497.herokuapp.com/<br>
 ユーザーネーム: takenishi711<br>
 パスワード: Tjapanish711<br>
 <br>
