@@ -1,5 +1,5 @@
 class EnglishUsers::RegistrationsController < ApplicationController
-
+# class EnglishUsers::RegistrationsController < Devise::RegistrationsController
   def new
     @english_user = EnglishUser.new
   end
