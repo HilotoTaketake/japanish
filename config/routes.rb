@@ -23,8 +23,14 @@ Rails.application.routes.draw do
   get '/english_users', to: 'english_users/sessions#index', as: :english_user_index_session
   delete '/japanese_users/sign_out', to: 'japanese_users/sessions#destroy', as: :japanese_user_destroy_session
   get '/japanese_users', to: 'japanese_users/sessions#index', as: :japanese_user_index_session
+  get '/english_users/:format/sign_in', to: 'english_users/sessions#new', as: :english_user_new_session
+  post '/english_users/:id/:format/sign_in', to: 'english_users/sessions#create', as: :create_english_user_session
+  # get '/english_users', to: 'english_users/sessions#index', as: :english_user_index_session
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
 
   resources :japanese_users
   resources :english_users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+
 end
