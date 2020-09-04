@@ -1,5 +1,11 @@
 class EnglishUsers::RegistrationsController < ApplicationController
-# class EnglishUsers::RegistrationsController < Devise::RegistrationsController
+
+  def index
+    @sex = Sex.all
+    @prefecture = Prefecture.all
+    @english_user = EnglishUser.find(params[:id])
+  end
+
   def new
     @english_user = EnglishUser.new
   end
@@ -8,7 +14,7 @@ class EnglishUsers::RegistrationsController < ApplicationController
     @english_user = EnglishUser.new(english_user_params)
     if @english_user.save
       bypass_sign_in(@english_user)
-      redirect_to english_users_path(@english_user)
+      redirect_to index_english_user_registration_path(id: current_english_user)
     else
       render :new
     end
@@ -22,7 +28,7 @@ class EnglishUsers::RegistrationsController < ApplicationController
     @english_user = EnglishUser.find(params[:id])
     if @english_user.update(english_user_params)
       bypass_sign_in(@english_user)
-      redirect_to english_users_path(@english_user)
+      redirect_to index_english_user_registration_path(@english_user)
     else
       render :edit
     end

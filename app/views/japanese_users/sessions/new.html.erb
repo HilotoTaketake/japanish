@@ -1,5 +1,5 @@
 <%= render "shared/header" %>
-  <%= form_with model:@japanese_user, url: japanese_user_session_path(@japanese_user), method: :post, local: true do |f| %>
+  <%= form_with model:@japanese_user, url: japanese_user_session_path, method: :post, local: true do |f| %>
     <div class="japanese">
       <div class="japanese__signin">
         <div class="japanese__signin__text">

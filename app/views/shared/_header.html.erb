@@ -1,11 +1,19 @@
 <div class="header">
   <div class="header__people">
-    <li><%= link_to "People", "#", method: :get, class:"header__people__btn"%></li>
+  <% if @english_user %>
+    <li><%= link_to "People", japanese_users_path, method: :get, class:"header__people__btn"%></li>
+  <% elsif @japanese_user %>
+    <li><%= link_to "People", english_users_path, method: :get, class:"header__people__btn"%></li>
+  <% end %>
   </div>
   <div class="header__chat">
     <li><%= link_to "Chat", "#", method: :get, class:"header__chat__btn"%></li>
   </div>
   <div class="header__mypage">
-    <li><%= link_to "MyPage", "#", method: :get, class:"header__mypage__btn"%></li>
+  <% if @japanese_user %>
+    <li><%= link_to "MyPage", index_english_user_registration_path(id: current_english_user), method: :get, class:"header__mypage__btn"%></li>
+  <% elsif @english_user %>
+    <li><%= link_to "MyPage", index_japanese_user_registration_path(id: current_japanese_user), method: :get, class:"header__mypage__btn"%></li>
+  <% end %>
   </div>
 </div>

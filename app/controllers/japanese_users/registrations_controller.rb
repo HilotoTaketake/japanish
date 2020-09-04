@@ -1,5 +1,12 @@
 class JapaneseUsers::RegistrationsController < ApplicationController
 
+  def index
+    @sex = Sex.all
+    @prefecture = Prefecture.all
+    @japanese_user = JapaneseUser.find(params[:id])
+    # @japanese_user = JapaneseUser.find(id: current_japanese_user)
+  end
+
   def new
     @japanese_user = JapaneseUser.new
   end
@@ -8,7 +15,7 @@ class JapaneseUsers::RegistrationsController < ApplicationController
     @japanese_user = JapaneseUser.new(japanese_user_params)
     if @japanese_user.save
       bypass_sign_in(@japanese_user)
-      redirect_to japanese_users_path(@japanese_user)
+      redirect_to index_japanese_user_registration_path(@japanese_user)
     else
       render :new
     end
@@ -22,7 +29,7 @@ class JapaneseUsers::RegistrationsController < ApplicationController
     @japanese_user = JapaneseUser.find(params[:id])
     if @japanese_user.update(japanese_user_params)
       bypass_sign_in(@japanese_user)
-      redirect_to japanese_users_path(@japanese_user)
+      redirect_to index_japanese_user_registration_path(@japanese_user)
     else
       render :edit
     end
