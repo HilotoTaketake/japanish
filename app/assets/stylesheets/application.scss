@@ -13,20 +13,21 @@
  *= require_tree .
  *= require_self
  */
-
+@import "english_users/english_users/index";
 @import "english_users/registrations/new";
+@import "english_users/registrations/index";
+@import "english_users/registrations/edit";
+@import "english_users/sessions/new";
+@import "english_users/sessions/index";
+@import "english_users/sessions/new";
+@import "japanese_users/japanese_users/index";
 @import "japanese_users/registrations/new";
+@import "japanese_users/registrations/index";
+@import "japanese_users/registrations/edit";
+@import "japanese_users/sessions/index";
+@import "japanese_users/sessions/new";
 @import "shared/header";
 @import "tops/index";
 @import "reset";
-@import "english_users/english_users/index";
-@import "japanese_users/japanese_users/index";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "english_users/registrations/edit";
-@import "japanese_users/registrations/edit";
-@import "english_users/sessions/new";
-@import "english_users/sessions/index";
-@import "japanese_users/sessions/index";
-@import "english_users/sessions/new";
-@import "japanese_users/sessions/new";

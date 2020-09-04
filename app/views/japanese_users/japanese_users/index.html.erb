@@ -1,67 +1,55 @@
-<%= render "shared/header" %>
-  <div class="my">
-    <ul class='my__btn'>
-    <% if japanese_user_signed_in? %>
-      <li>
-        <%= link_to japanese_user_edit_registration_path, method: :get do%>
-        <%= icon('fa', 'cog', class: "my__btn__icon")%>
-        <% end %> 
-      </li> 
-      <li><%= link_to 'Log-out', japanese_user_destroy_session_path, method: :delete, class: "my__btn__out" %></li>
+  <%= render "shared/header" %>
+  <div class="index">
+    <%# <div class="index__search"> %>
+      <%# <%= search_form_for @p, url: search_english_users_path, local: true, method: :get, class: "index__search__form" do |f| %> 
+        <%# <%= f.collection_select(:prefecture_id_eq, Prefecture.all, :id, :name, {include_blank:"Prefecture"}, {class:"index__search__form__select"}) %> 
+        <%# <%= f.submit "Search", class: "index__search__form__btn"%> 
+      <%# <% end %> 
+    <%# </div> %>
+    <%= link_to "#", method: :get, class: "index__info" do %>
+      <% @japanese_user.each do |japanese_user| %>
+      <div class="index__info__for">
+        <div class="index__info__for__img">
+          <%= image_tag japanese_user.selfy.variant(combine_options:{resize:"100x100^",crop:"100x100+0+0",gravity: :center}).processed if japanese_user.selfy.present? %>
+        </div>
+        <div class="index__info__list">
+          <div class="index__info__for__list__name">
+            <%= japanese_user.name %>
+          </div>
+          <div class="index__info__for__list__year">
+            <%= japanese_user.how_old %>
+          </div>
+          <div class="index__info__for__list__prefecture">
+            <%= japanese_user.prefecture.name %>
+          </div>
+        </div>
+        <div class="index__info__for__topics">
+          <% if japanese_user.topic_1.present? %>
+          <div class="index__info__for__topics__1">
+            <%= japanese_user.topic_1 %>
+          </div>
+          <% end %>
+          <% if japanese_user.topic_2.present? %>
+          <div class='index__info__for__topics__2'>
+            <%= japanese_user.topic_2 %>
+          </div>
+          <% end %>
+          <% if japanese_user.topic_3.present? %>
+          <div class='index__info__for__topics__3'>
+            <%= japanese_user.topic_3 %>
+          </div>
+          <% end %>
+        </div>
+        <div class="index__info__for__introduction">
+          <% if japanese_user.introduction.present? %>
+          <div class='index__info__for__introduction__text'>
+            <%= japanese_user.introduction %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <% end %>
     <% end %>
-    </ul>
-    <div class="my__profile">
-      <div class="my__profile__index">
-        <label class="my__profile__index__my_profile">My Profile</label>
-      </div>
-      <div class="my__profile__box">
-        <%= image_tag @japanese_user.selfy.variant(combine_options:{resize:"350x350^",crop:"350x350+0+0",gravity: :center}), class:"my__profile__box__img" %> 
-      </div> 
-      <div class="my__profile__nickname">
-        <div class="my__profile__nickname__label">Name</div>
-        <div class="my__profile__nickname__data"><%= @japanese_user.name %></div>
-      </div>
-      <div class="my__profile__sex">
-        <div class="my__profile__sex__label">Sex</div>
-        <div class="my__profile__sex__data"><%= @japanese_user.sex.name %></div>
-      </div>
-      <div class="my__profile__how_old">
-        <div class="my__profile__how_old__label">How-old</div>
-        <div class="my__profile__how_old__data"><%= @japanese_user.how_old %></div>
-      </div>
-      <div class="my__profile__prefecture">
-        <div class="my__profile__prefecture__label">Prefecture</div>
-        <div class="my__profile__prefecture__data"><%= @japanese_user.prefecture.name %></div>
-      </div>
-      <% if @japanese_user.topic_1.present? %>
-      <div class="my__profile__topic">
-        <div class="my__profile__topic__label">Topic1</div>
-        <div class="my__profile__topic__data">
-          <div class="my__profile__topic__data__1"><%= @japanese_user.topic_1 %></div>
-        </div>
-      </div>
-      <% end %>
-      <% if @japanese_user.topic_2.present? %>
-      <div class="my__profile__topic">
-        <div class="my__profile__topic__label">Topic2</div>
-        <div class="my__profile__topic__data">
-          <div class="my__profile__topic__data__2"><%= @japanese_user.topic_2 %></div>
-        </div>
-      </div>
-      <% end %>
-      <% if @japanese_user.topic_3.present? %>
-      <div class="my__profile__topic">
-        <div class="my__profile__topic__label">Topic3</div>
-        <div class="my__profile__topic__data">
-          <div class="my__profile__topic__data__3"><%= @japanese_user.topic_3 %></div>
-        </div>
-      </div>
-      <% end %>
-      <% if @japanese_user.introduction.present? %>
-      <div class="my__profile__introduction">
-        <div class="my__profile__introduction__label">Introduction</div>
-        <div class="my__profile__introduction__data"><%= @japanese_user.introduction %></div>
-      </div>
-      <% end %>
-    </div>
   </div>
+
+   

@@ -1,161 +1,90 @@
-.my {
-  margin-left: 35px;
-  margin-right: 35px;
-  height: 90%;
-  background-color: skyblue;
-  &__btn {
+.index {
+  background-image: linear-gradient(-90deg, #FF00A1, #F6FF00);
+  height: 100％;
+  overflow: scroll;
+  &__search {
     display: flex;
-    justify-content: start;
-    &__icon {
-      color: black;
-      font-size: 30px;
-    }
-    &__out {
-      color: black;
-      font-size: 30px;
-      text-decoration: none;
-      padding: 5px;
-      margin: 10px;
-      background-color: white;
-      border: solid 1px black;
-      color: skyblue;
+    justify-content: center;
+    height: 5px;
+    &__form {
+      width: 300px;
+      margin-top: 15px;
+      &__select {
+        font-size: 15px ;
+        height: 5vh;
+      }
+      &__btn {
+        background-color: skyblue;
+        color: white;
+        font-size: 15px;
+        padding: 5px;
+        border: solid 1px black;
+      }
     }
   }
-  &__profile {
-    display: block;
-    &__index {
+  &__info {
+    text-decoration: none;
+    &__for {
+      margin:60px 10px 0px 10px;
       display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-      &__my_profile {
-        font-size: 50px;
+      justify-content: space-between;
+      height: 100px;
+      background-color: white;
+      &__img{
+        padding-left: 0px;
       }
-    }
-    &__box {
-      display: flex;
-      justify-content: center;
-      &__img {
-        border: 1px black;
+      &__list {
+        width: 20vw;
+        display: inline-block;
+        text-decoration: none;
+        &__name {
+          padding-bottom: 2px;
+          size: 15px;
+          text-align: center;
+          color: #000;
+          margin-top: 5px;
+        }
+        &__year {
+          size: 15px;
+          text-align: center;
+          color: #000;
+          margin-top: 5px;
+        }
+        &__prefecture {
+          size: 10px;
+          text-align: center;
+          color: #000;
+          margin-top: 5px;
+        }
       }
-    }
-    &__nickname {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 25px;
-      &__label {
-        font-size: 30px;
-        color: yellow;
-      }
-      &__data {
-        font-size: 30px;
-        color: navy;
-      }
-    }
-    &__sex {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 25px;
-      &__label {
-        font-size: 30px;
-        color: yellow;
-      }
-      &__data {
-      font-size: 30px;
-      color: navy;
-      }
-    }
-    &__how_old {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 25px;
-      &__label {
-        font-size: 30px;
-        color: yellow;
-      }
-      &__data {
-      font-size: 30px;
-      color: navy;
-      }
-    }
-    &__prefecture {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 25px;
-      &__label {
-        font-size: 30px;
-        color: yellow;
-      }
-      &__data {
-      font-size: 30px;
-      color: navy;
-      }
-    }
-    &__topic {
-      margin-top: 25px;
-      display: flex;
-      justify-content: space-around;
-      &__label {
-        font-size: 30px;
-      }
-      &__data {
+      &__topics{
+        width: 20vw;
+        color: #000;
         &__1 {
-          font-size: 30px;
-          color: navy;
+          size: 10px;
+          text-align: center;
+          top: 2px;
+          margin-top: 5px;
         }
-      }
-      &__label {
-        font-size: 30px;
-      }
-    }
-    &__topic {
-      margin-top: 25px;
-      display: flex;
-      justify-content: space-around;
-      &__label {
-        font-size: 30px;
-        color: yellow;
-      }
-      &__data {
         &__2 {
-          font-size: 30px;
-          color: navy;
+          size: 10px;
+          text-align: center;
+          top: 2px;
+          margin-top: 5px;
         }
-      }
-      &__label {
-        font-size: 30px;
-        color: yellow;
-      }
-    }
-    &__topic {
-      margin-top: 25px;
-      display: flex;
-      justify-content: space-around;
-      j
-      &__label {
-        font-size: 30px;
-        color: yellow;
-      }
-      &__data {
         &__3 {
-          font-size: 30px;
-          color: navy;
+          size: 10px;
+          text-align: center;
+          top: 2px;
+          margin-top: 5px;
         }
       }
-      &__label {
-        font-size: 30px;
-      }
-    }
-    &__introduction {
-      margin-top: 25px;
-      display: flex;
-      justify-content: space-around;
-      &__label {
-        font-size: 30px;
-        color: yellow;
-      }
-      &__data {
-      font-size: 30px;
-      color: navy;
+      &__introduction {
+        width: 25vw;
+        color: #000;
+        &__text {
+          size: 10px;
+        }
       }
     }
   }

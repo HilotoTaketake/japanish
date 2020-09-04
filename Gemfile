@@ -60,3 +60,4 @@ gem 'devise'
 gem 'active_hash'
 gem 'mini_magick'
 gem "font-awesome-sass"
+gem 'ransack'
